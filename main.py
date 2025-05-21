@@ -18,11 +18,11 @@ logging.basicConfig(level=logging.INFO)
 async def handle_message(message: Message):
     user_input = message.text
     try:
-        response = client.chat.completions.create(
-            model="gpt-4",  # или "gpt-3.5-turbo"
-            messages=[{"role": "user", "content": user_input}],
-            max_tokens=1000,
-        )
+       response = client.chat.completions.create(
+    model="gpt-4o",  # ← вот это правильно
+    messages=[{"role": "user", "content": user_input}],
+    max_tokens=1000,
+)
         answer = response.choices[0].message.content
         await message.answer(answer)
     except Exception as e:
