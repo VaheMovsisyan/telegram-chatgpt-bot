@@ -5,8 +5,6 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from aiogram.utils import executor
 
-load_dotenv()
-
 TELEGRAM_TOKEN = os.getenv("7891979481:AAF7baXkYDAiWxYsOh9NWRe3Sl1WO5lww0A")
 OPENAI_API_KEY = os.getenv("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")
 
